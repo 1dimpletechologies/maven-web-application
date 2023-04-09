@@ -23,7 +23,7 @@ stage('5deploy2UAT'){
 }
 
 stage('7deploy2Prod'){
-   deploy adapters: [tomcat9(credentialsId: '2f2e285e-c3a1-48ed-9e2e-82aeffab10aa', path: '', url: 'http://3.96.135.40:8177/')], contextPath: null, war: 'target/*war'
+   deploy adapters: [tomcat9(credentialsId: 'tomcat2', path: '', url: 'http://35.182.248.120:8177')], contextPath: null, war: 'target/*.war'
  }
  stage('8emailNotify'){
  emailext body: '''Hello Team,
